@@ -31,7 +31,6 @@ public class RGSTest {
 
         String baseURL = "https://www.rgs.ru/";
         driver.get(baseURL);
-        waitUtilElementToBeVisible(driver.findElement(By.xpath("//img")));
     }
 
     @Test
@@ -121,10 +120,6 @@ public class RGSTest {
 
     private void waitUtilElementToBeVisible(By locator){
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-
-    private void waitUtilElementToBeVisible(WebElement element){
-        wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     private void fillInputField(WebElement element,String value){
